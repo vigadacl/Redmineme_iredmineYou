@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RedmineMe_IredmineYou</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- login -->
+    <string name="welcome"> Welcome to RedmineMe_IredmineYou</string>
+    <string name="usernameHint">username or email</string>
+    <string name="passwordHint">password</string>
+    <string name="emailHint">email</string>
+    <string name="login">Login</string>
+    <string name="registerPage">create a new acccount</string>
+    <string name="register">Create a  new Account</string>
+    <string name="passwordforget">have you forget your pass?</string>
+
+    <!-- menu -->
+    <string name="profil">Edit Profil</string>
+    <string name="service">redmine me</string>
+    <string name="group">Groups</string>
+    <string name="setting">Settings</string>
+    <!-- hello -->
+    <string name="hello">welcome</string>
+    <string name="name">name</string>
+    <string name="pass">password</string>
+    <string name="email">email</string>
+    <string name="profilseite">My Profil</string>
+
+    <!-- settings -->
+
+    <string name="dialog_based_preferences">Profil</string>
+    <string name="dialog_setting_preferences">Settings</string>
+    
+    <!-- notifications -->
+    <string name="title_checkbox_preference">Notifications</string>
+    <string name="summary_checkbox_preference">Receive notifications via e-mail</string>
+    
+    <!-- name -->
+    <string name="title_editname_preference">Name</string>
+    <string name="summary_editname_preference">Your name</string>
+    <string name="dialog_title_editname_preference">Change your Name</string>
+    
+     <!-- pass -->
+    <string name="title_editpass_preference">Password</string>
+    <string name="summary_editpass_preference">Your password</string>
+    <string name="dialog_title_editpass_preference"> Change your password</string>
+    
+      <!-- email -->
+    <string name="title_editemail_preference">Email</string>
+    <string name="summary_editemail_preference">Your email</string>
+    <string name="dialog_title_editemail_preference"> Change your email</string>
+    
+    
+    <!-- choose language -->
+    <string name="language_listpreference">Language</string>
+    <string name="summary_language_listpreference">select a language</string>
+    <string name="dialog_language_listpreference">Choose a language</string>
+
+    <string-array name="language_entriesValues">
+        <item>Englisch</item>
+        <item>French</item>
+        <item>Deutsch</item>
+    </string-array>
+    <string-array name="language_entries">
+         <item>Englisch</item>
+        <item>French</item>
+        <item>Deutsch</item>
+    </string-array>
+</resources>

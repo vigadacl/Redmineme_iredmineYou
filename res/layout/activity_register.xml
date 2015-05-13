@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/passId"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/userId"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="@string/passwordHint"
+        android:nextFocusDown="@+id/login"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#cccccc" />
+
+    <TextView
+        android:id="@+id/emailId"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/passId"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="@string/emailHint"
+        android:nextFocusDown="@+id/login"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#cccccc" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="280dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/emailId"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/login_button_bg"
+        android:ems="10"
+        android:nextFocusDown="@+id/register"
+        android:padding="10dp"
+        android:text="@string/register"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="@string/registerPage"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/userId"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/passId"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="70dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="@string/usernameHint"
+        android:nextFocusDown="@+id/passId"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#cccccc" />
+
+</RelativeLayout>

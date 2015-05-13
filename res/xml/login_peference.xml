@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+                 
+    <PreferenceCategory
+            android:title="@string/dialog_based_preferences">
+
+        <EditTextPreference
+                android:key="edittext_preference"
+                android:title="@string/title_editname_preference"
+                android:summary="@string/summary_editname_preference"
+                android:dialogTitle="@string/dialog_title_editname_preference" />
+        
+        <EditTextPreference
+                android:key="editpassword_preference"
+                android:inputType="textPassword"
+                android:title="@string/title_editpass_preference"
+                android:summary="@string/summary_editpass_preference"
+                android:dialogTitle="@string/dialog_title_editpass_preference" />
+                
+          <EditTextPreference
+                android:key="editemail_preference"
+                android:inputType="textEmailAddress" 
+                android:title="@string/title_editemail_preference"
+                android:summary="@string/summary_editemail_preference"
+                android:dialogTitle="@string/dialog_title_editemail_preference" />
+          
+       
+       </PreferenceCategory>
+
+</PreferenceScreen>
