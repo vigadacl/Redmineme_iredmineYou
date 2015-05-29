@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+     <item
+        android:id="@+id/action_newGroup"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_newGroup"/>
+     
+      <item
+        android:id="@+id/action_inviteAFriend"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/action_inviteAfriend"/>
+      
+       <item
+        android:id="@+id/friendList"
+        android:orderInCategory="3"
+        android:showAsAction="always"
+        android:title="@string/friendList"/>
+
+</menu>

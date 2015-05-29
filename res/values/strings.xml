@@ -1,25 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">RedmineMe_IredmineYou</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-
+    <string name="app_name">Modular-Systeme</string>
+    
+    <!-- -reset password (to changed a password) -->
+    <string name="txtToResetPass">to reset or change your password you need to specified your email</string>
+    <string name="cancel">undo</string>
+    <string name="search">search</string>
+    <string name="emailNotFound">This email has not been found in our System. Please check it again</string>
+    <string name="emailFound">Your email has been found</string>
+    <string name="emailConfirm">You will receive a email in few minuten</string>
+    
     <!-- login -->
-    <string name="welcome"> Welcome to RedmineMe_IredmineYou</string>
-    <string name="usernameHint">username or email</string>
+    <string name="welcome"> Welcome to Modular-Systeme </string>
+    <string name="usernameHint">username</string>
     <string name="passwordHint">password</string>
     <string name="emailHint">email</string>
-    <string name="login">Login</string>
+    <string name="login">Sign in</string>
     <string name="registerPage">create a new acccount</string>
-    <string name="register">Create a  new Account</string>
-    <string name="passwordforget">have you forget your pass?</string>
+    <string name="register">Sign up</string>
+    <string name="passwordforget">have you forget your password?</string>
+    <string name="show_pwd">Show password</string>
+    <string name="login_username_empty">username is empty</string>
+    <string name="login_password_empty">password is empty</string>
+    <string name="login_email_empty">email is empty</string>
+    <string name="no_network_title">network</string>
+    <string name="no_network_message">no network avalaible.Please active your network</string>
 
+    <!-- Main menu -->
+    <string-array name="mainMenu">
+        <item> Profil </item>
+        <item> FriendList </item>
+        <item> Services </item>
+        <item> Settings </item>
+    </string-array>
+    <string-array name="mainMenudescription">
+        <item> See your Profil </item>
+        <item> See the List of all your friends </item>
+        <item> Subscribed Services </item>
+        <item> Change default Settings</item>
+    </string-array>
+    <string-array name="serviceMenu">
+        <item> Remine </item>
+        <item> Chatroom </item>
+    </string-array>
+    <string-array name="serviceMenudescription">
+        <item> Remember me </item>
+        <item>Chat with your friends </item>
+    </string-array>
+
+    
+    
+    <!-- remineme dialog -->
+    <string name="action_remineMe">Remine me</string>
+    <string name="action_remineMeGroup">Remine Group</string>
+    <string name="newReminemetitle">New remine me</string>
+    <string name="newRemineGrouptitle">New remine for Group</string>
+    <string name="datebegin">Date beginn</string>
+    <string name="dateend">date end</string>
+    <string name="remember_date">remember me at</string>
+    <string name="from">Enter date begin</string>  
+    <string name="to">Enter date end</string>
+    <string name="remember">Enter date remember</string>
+   
+    <!--  -->
+    <string name="text">date</string>
+    
+    <!-- new group dialog -->
+    <string name="newgrouptitle">Create a new group</string>
+    <string name="newgroupname">Name of group</string>
+    <string name="description">Description</string>
+    <string name="descriptionHint">description</string>
+    <string name="groupHint">name</string>
+    <string name="btncreategroup">Create group</string>
+    
+    <string name="from_date">from date</string>
+    <string name="to_date">to date</string>
+    
     <!-- menu -->
-    <string name="profil">Edit Profil</string>
-    <string name="service">redmine me</string>
+    <string name="searchFriendInModulSystem">Search</string>
+    <string name="desc">profil description</string>
+    <string name="profildescription"> See your Profil </string>
+    <string name="friends">Friends list</string>
+    <string name="settings">Settings</string>
+    <string name="nameHint">Aa</string>
+    <string name="profil">Profil</string>
+    <string name="friendlist">FriendList</string>
+    <string name="service">Services</string>
     <string name="group">Groups</string>
     <string name="setting">Settings</string>
+
+    <!-- services menu -->
+    <string name="reminemeIremieyou">Remineme_Iremineyou</string>
+    <string name="chatroom">Chatroom</string>
+    <string name="challengeMe">ChallengeMe</string>
+    
+    
     <!-- hello -->
     <string name="hello">welcome</string>
     <string name="name">name</string>
@@ -27,31 +103,46 @@
     <string name="email">email</string>
     <string name="profilseite">My Profil</string>
 
+    <!-- menu redmineme -->
+    <string name="action_remineMeThat">new remine me</string>
+    <string name="action_remineGroup">new remine a Group</string>
+
+    <!-- menu group -->
+    <string name="action_inviteAfriend">Invite Friend</string>
+    <string name="action_newGroup">New Group</string>
+    <string name="friendList">List of Friends</string>
+
     <!-- settings -->
 
     <string name="dialog_based_preferences">Profil</string>
     <string name="dialog_setting_preferences">Settings</string>
-    
+    <string name="dialog_setting_service">Service</string>
+
+    <!-- setting active or not active-->
+    <string name="chat">Chatroom</string>
+    <string name="challengeme">DerDuel</string>
+    <string name="groupInfos">Groups</string>
+    <string name="java">Learn Java</string>
+
     <!-- notifications -->
     <string name="title_checkbox_preference">Notifications</string>
     <string name="summary_checkbox_preference">Receive notifications via e-mail</string>
-    
+
     <!-- name -->
     <string name="title_editname_preference">Name</string>
     <string name="summary_editname_preference">Your name</string>
     <string name="dialog_title_editname_preference">Change your Name</string>
-    
-     <!-- pass -->
+
+    <!-- pass -->
     <string name="title_editpass_preference">Password</string>
     <string name="summary_editpass_preference">Your password</string>
     <string name="dialog_title_editpass_preference"> Change your password</string>
-    
-      <!-- email -->
+
+    <!-- email -->
     <string name="title_editemail_preference">Email</string>
     <string name="summary_editemail_preference">Your email</string>
     <string name="dialog_title_editemail_preference"> Change your email</string>
-    
-    
+
     <!-- choose language -->
     <string name="language_listpreference">Language</string>
     <string name="summary_language_listpreference">select a language</string>
@@ -63,8 +154,9 @@
         <item>Deutsch</item>
     </string-array>
     <string-array name="language_entries">
-         <item>Englisch</item>
+        <item>Englisch</item>
         <item>French</item>
         <item>Deutsch</item>
     </string-array>
+
 </resources>

@@ -16,5 +16,36 @@
             android:summary="@string/summary_language_listpreference"
             android:title="@string/language_listpreference" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="@string/dialog_setting_service" >
+        
+    <SwitchPreference
+        android:key="service_chat"
+        android:title="@string/chat"
+        android:summaryOff="chatroom is not active"
+        android:summaryOn="chatroom is active. Enjoy it!"
+        android:defaultValue="false" />
+    
+     <SwitchPreference
+        android:key="service_groupInfos"
+        android:title="@string/groupInfos"
+        android:summaryOff="groupInfos is not active"
+        android:summaryOn="groupInfos is now active.You can subscrived to each group!"
+        android:defaultValue="false" />
+     
+      <SwitchPreference
+        android:key="service_LearnJava"
+        android:title="@string/java"
+        android:summaryOff="you cannot learn java here until to active it"
+        android:summaryOn="Enjoy it!"
+        android:defaultValue="false" />
+
+    <SwitchPreference
+        android:key="service_quiz"
+        android:title="@string/challengeme"
+        android:summaryOff="This game is not active"
+        android:summaryOn="Now you can play. enjoy it!"
+        android:defaultValue="false" />
+ 
+    </PreferenceCategory>
 
 </PreferenceScreen>
