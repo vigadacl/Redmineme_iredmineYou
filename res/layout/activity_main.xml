@@ -6,9 +6,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.bes.redmineme_iredmineyou.MainActivity" >
+    tools:context="com.tes.modulSystem.activity.MainActivity" >
 
-    <TextView
+    <EditText
         android:id="@+id/passId"
         android:layout_width="280dp"
         android:layout_height="40dp"
@@ -18,19 +18,32 @@
         android:background="#ffffff"
         android:ems="10"
         android:hint="@string/passwordHint"
-        android:nextFocusDown="@+id/login"
+        android:nextFocusDown="@+id/cbShowPwd"
         android:padding="10dp"
         android:textColor="#000000"
+        android:inputType="textPassword"
         android:textColorHint="#cccccc" />
+    
+      <CheckBox
+        android:id="@+id/cbShowPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/passId"
+        android:layout_below="@+id/passId"
+        android:layout_marginTop="23dp"
+        android:text="@string/show_pwd"
+        android:nextFocusDown="@+id/login"
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/login"
         android:layout_width="280dp"
         android:layout_height="45dp"
-        android:layout_below="@+id/passId"
+        android:layout_below="@+id/cbShowPwd"
         android:layout_centerInParent="true"
         android:layout_marginTop="21dp"
         android:background="@drawable/login_button_bg"
+        android:onClick="onClickStart"
         android:ems="10"
         android:nextFocusDown="@+id/register"
         android:padding="10dp"
@@ -61,7 +74,7 @@
         android:ems="10"
         android:padding="10dp"
         android:text="@string/passwordforget"
-        android:textColor="#000" />
+        android:textColor="@drawable/text_color" />
 
     <TextView
         android:id="@+id/textView1"
@@ -74,16 +87,17 @@
         android:textSize="15sp"
         android:textColor="#000" />
 
-    <TextView
+    <EditText
         android:id="@+id/userId"
         android:layout_width="280dp"
         android:layout_height="40dp"
-        android:layout_alignLeft="@+id/passId"
         android:layout_below="@+id/textView1"
+        android:layout_centerInParent="true"
         android:layout_marginTop="66dp"
         android:background="#ffffff"
         android:ems="10"
-        android:hint="@string/usernameHint"
+        android:inputType="text"
+        android:hint="@string/emailHint"
         android:nextFocusDown="@+id/passId"
         android:padding="10dp"
         android:textColor="#000000"
