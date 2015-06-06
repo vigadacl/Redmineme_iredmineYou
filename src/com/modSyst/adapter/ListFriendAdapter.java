@@ -10,34 +10,29 @@ import android.widget.TextView;
 
 import com.tes.modulSystem.R;
 
-public class MenuAdapter extends ArrayAdapter<String> {
-
+public class ListFriendAdapter extends ArrayAdapter<String>{
 	Activity context;
 	int[] imageId;
 	String[] titleArray;
-	String[] descriptionArray;
 
-	public MenuAdapter(Activity context, String[] titles, int[] img,
-			String[] desc) {
+	public ListFriendAdapter(Activity context, String[] titles, int[] img) {
 		super(context, R.layout.singlerow, titles);
 		this.imageId = img;
 		this.context = context;
 		this.titleArray = titles;
-		this.descriptionArray = desc;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LayoutInflater infalter = context.getLayoutInflater();
-		View row = infalter.inflate(R.layout.singlerow, null, true);
+		View row = infalter.inflate(R.layout.singlerowfriendlist, null, true);
 
-		ImageView myImage = (ImageView) row.findViewById(R.id.img);
-		TextView myTitle = (TextView) row.findViewById(R.id.txt);
-		TextView myDescription = (TextView) row.findViewById(R.id.desc);
+		ImageView myImage = (ImageView) row.findViewById(R.id.img1);
+		TextView myTitle = (TextView) row.findViewById(R.id.txt1);
 
 		myImage.setImageResource(imageId[position]);
 		myTitle.setText(titleArray[position]);
-		myDescription.setText(descriptionArray[position]);
 		return row;
 	}
+
 }

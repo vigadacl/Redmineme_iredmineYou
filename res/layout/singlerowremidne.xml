@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/remidnename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="31dp"
+        android:nextFocusDown="@+id/description"
+        android:text="Contrat"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+     <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="60dp"
+        android:nextFocusDown="@+id/start"
+        android:text="description"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
+        android:ems="12"
+        android:nextFocusLeft="@+id/startdate"
+        android:text="@string/start"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/end"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/startdate"
+        android:layout_alignBottom="@+id/startdate"
+        android:layout_toLeftOf="@+id/enddate"
+        android:ems="10"
+        android:nextFocusLeft="@+id/enddate"
+        android:text="@string/end"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/enddate"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/end"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:nextFocusLeft="@+id/delay"
+        android:text="date"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/startdate"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/start"
+        android:layout_toLeftOf="@+id/end"
+        android:ems="10"
+        android:nextFocusLeft="@+id/end"
+        android:text="date"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/delay"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/enddate"
+        android:layout_alignBottom="@+id/enddate"
+        android:layout_toRightOf="@+id/enddate"
+        android:ems="10"
+        android:nextFocusLeft="@+id/delaydate"
+        android:text="@string/delay"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/delaydate"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/delay"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/delay"
+        android:ems="10"
+        android:text="date"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

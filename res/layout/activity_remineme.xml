@@ -3,67 +3,96 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <Button
+        android:id="@+id/createremineme"
+        android:layout_width="280dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp"
+        android:background="@drawable/login_button_bg"
+        android:ems="10"
+        android:onClick="onClickStart"
+        android:padding="10dp"
+        android:text="@string/createremineme"
+        android:textColor="#000" />
+
+      <TextView
+        android:id="@+id/remidnename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/from"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/name"
+        android:textSize="20sp" />
+      
     <TextView
         android:id="@+id/from"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/rememberdate"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="36dp"
-        android:height="30dp"
-        android:nextFocusDown="@+id/fromdate"
-        android:text="@string/from" />
+        android:layout_alignLeft="@+id/createremineme"
+        android:layout_below="@+id/remidnename"
+        android:layout_marginTop="26dp"
+        android:text="@string/from"
+        android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/fromdate"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/from"
-        android:layout_below="@+id/from"
-        android:ems="10"
-        android:hint="@string/from_date"
-        android:nextFocusDown="@+id/to" />
+    <TextView
+        android:id="@+id/delay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/from"
+        android:layout_centerVertical="true"
+        android:text="@string/delay"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/todate"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/rememberdate"
-        android:layout_below="@+id/to"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/from"
+        android:layout_alignBottom="@+id/from"
+        android:layout_alignLeft="@+id/startdate"
         android:ems="10"
-        android:hint="@string/to_date"
-        android:nextFocusDown="@+id/remember" />
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/delaydate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/delay"
+        android:layout_alignLeft="@+id/todate"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
 
     <TextView
         android:id="@+id/to"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/todate"
-        android:layout_below="@+id/fromdate"
-        android:layout_marginTop="38dp"
-        android:nextFocusDown="@+id/todate"
-        android:text="@string/to" />
-
-    <TextView
-        android:id="@+id/remember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/rememberdate"
-        android:layout_below="@+id/todate"
-        android:layout_marginTop="44dp"
-        android:nextFocusDown="@+id/rememberdate"
-        android:text="@string/remember" />
+        android:layout_above="@+id/delaydate"
+        android:layout_alignRight="@+id/delay"
+        android:layout_marginBottom="27dp"
+        android:text="@string/to"
+        android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/rememberdate"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/remember"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="19dp"
+        android:id="@+id/startdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/to"
+        android:layout_alignRight="@+id/createremineme"
         android:ems="10"
-        android:hint="@string/remember_date" />
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/remidnenametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/remidnename"
+        android:layout_alignLeft="@+id/todate"
+        android:ems="10"
+        android:inputType="text" />
 
 </RelativeLayout>

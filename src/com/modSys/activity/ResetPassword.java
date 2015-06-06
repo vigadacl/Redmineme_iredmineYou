@@ -1,4 +1,4 @@
-package com.tes.modulSystem.activity;
+package com.modSys.activity;
 
 import com.tes.modulSystem.R;
 

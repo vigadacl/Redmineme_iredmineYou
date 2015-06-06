@@ -1,4 +1,4 @@
-package com.tes.modulSystem.activity;
+package com.modSys.activity;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;

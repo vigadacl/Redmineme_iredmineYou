@@ -6,23 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.tes.modulSystem.activity.MainActivity" >
-
-    <EditText
-        android:id="@+id/passId"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/userId"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="16dp"
-        android:background="#ffffff"
-        android:ems="10"
-        android:hint="@string/passwordHint"
-        android:nextFocusDown="@+id/cbShowPwd"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:inputType="textPassword"
-        android:textColorHint="#cccccc" />
+    tools:context="com.modSys.activity.MainActivity" >
     
       <CheckBox
         android:id="@+id/cbShowPwd"
@@ -88,7 +72,7 @@
         android:textColor="#000" />
 
     <EditText
-        android:id="@+id/userId"
+        android:id="@+id/emailId"
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:layout_below="@+id/textView1"
@@ -96,11 +80,30 @@
         android:layout_marginTop="66dp"
         android:background="#ffffff"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:hint="@string/emailHint"
         android:nextFocusDown="@+id/passId"
         android:padding="10dp"
         android:textColor="#000000"
         android:textColorHint="#cccccc" />
+
+    <EditText
+        android:id="@+id/passId"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/emailId"
+        android:layout_marginTop="25dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="@string/passwordHint"
+        android:inputType="textPassword"
+        android:nextFocusDown="@+id/cbShowPwd"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#cccccc" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

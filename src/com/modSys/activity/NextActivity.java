@@ -1,44 +1,39 @@
-package com.tes.modulSystem.activity;
+package com.modSys.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.modSyst.adapter.MenuAdapter;
 import com.tes.modulSystem.R;
-import com.tes.modulSystem.adapter.MenuAdapter;
 
-public class NextActivity extends Activity implements OnClickListener {
-
-	private String[] titles;
-	private String[] description;
-	private ListView listView;
-
-	private int[] images = new int[] { R.drawable.imageprofil,
-			R.drawable.group, R.drawable.ic_services, R.drawable.imagesettings };
+public class NextActivity extends ListAdapterActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_next);
+		
+		images = new int[] { R.drawable.imageprofil,
+				R.drawable.group, R.drawable.ic_services, R.drawable.imagesettings };
 
 		Resources res = getResources();
+		//main menu
 		titles = res.getStringArray(R.array.mainMenu);
+		//description of each item menu
 		description = res.getStringArray(R.array.mainMenudescription);
-		listView = (ListView) findViewById(R.id.listview);
+		listview = (ListView) findViewById(R.id.listview);
+		//adapter for the listview
 		MenuAdapter mAdapter = new MenuAdapter(NextActivity.this, titles,
 				images, description);
-		listView.setAdapter(mAdapter);
+		listview.setAdapter(mAdapter);
 
-		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+		listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
@@ -50,7 +45,11 @@ public class NextActivity extends Activity implements OnClickListener {
 					Intent intent = new Intent(NextActivity.this,
 							ProfilActivity.class);
 					startActivity(intent);
-				} else if (position == 2) {
+				}else if (position == 1) {
+					Intent intent = new Intent(NextActivity.this,
+							FriendListActivity.class);
+					startActivity(intent);
+				}else if (position == 2) {
 					Intent intent = new Intent(NextActivity.this,
 							ServiceActivity.class);
 					startActivity(intent);
@@ -64,39 +63,7 @@ public class NextActivity extends Activity implements OnClickListener {
 
 	}
 
-	@Override
-	public void onClick(View v) {
 
-	}
-
-	public ListView getListView() {
-		return listView;
-	}
-
-	public String[] getTitles() {
-		return titles;
-	}
-
-	public void setTitles(String[] titles) {
-		this.titles = titles;
-	}
-
-	public String[] getDescription() {
-		return description;
-	}
-
-	public void setDescription(String[] description) {
-		this.description = description;
-	}
-
-	public int[] getImages() {
-		return images;
-	}
-
-	public void setImages(int[] images) {
-		this.images = images;
-	}
 	
-
 }
 

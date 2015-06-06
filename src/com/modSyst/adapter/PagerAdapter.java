@@ -1,4 +1,4 @@
-package com.tes.modulSystem.adapter;
+package com.modSyst.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
