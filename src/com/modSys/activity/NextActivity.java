@@ -3,6 +3,8 @@ package com.modSys.activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -63,7 +65,32 @@ public class NextActivity extends ListAdapterActivity {
 
 	}
 
-
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.next, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+    
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int id = item.getItemId();
+		if (id == R.id.action_logout) {
+			Intent i = new Intent(NextActivity.this,MainActivity.class);
+			this.startActivity(i);
+			Toast.makeText(NextActivity.this,
+					"You are disconnect ",
+					Toast.LENGTH_SHORT).show();
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	public void onBackPressed() {
+		//do nothing
+	}
+	
+	
 	
 }
 

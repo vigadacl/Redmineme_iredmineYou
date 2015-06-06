@@ -11,11 +11,12 @@
     <string name="emailFound">Your email has been found</string>
     <string name="emailConfirm">You will receive a email in few minuten</string>
     
-    <!-- login -->
+    <!-- login or logout -->
     <string name="welcome"> Welcome to Modular-Systeme </string>
     <string name="usernameHint">username</string>
     <string name="passwordHint">password</string>
     <string name="emailHint">email</string>
+    <string name="logout">LOGOUT</string>
     <string name="login">Sign in</string>
     <string name="password_short">your password is short. It muss contains at least 6 letters</string>
     <string name="registerPage">create a new acccount</string>
