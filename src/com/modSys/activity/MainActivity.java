@@ -85,14 +85,16 @@ public class MainActivity extends UserActivity implements OnClickListener {
 				boolean loginstatus = false;
 				email2 = "";
 				do {
-					if (emailA.equals(cs.getString(1))
-							&& !pass.equals(cs.getString(3))) {
+					if (emailA.equals(cs.getString(0))
+							&& !pass.equals(cs.getString(1))){
 						loginstatus = false;
 						password.requestFocus();
 						password.setError(getString(R.string.password_matched_email));
-					} else {
+						loginstatus = false;
+					}else if (emailA.equals(cs.getString(0))
+							&& pass.equals(cs.getString(1))){
 						loginstatus = true;
-						email2 = cs.getString(1);
+						email2 = cs.getString(0);
 					}
 
 				} while (cs.moveToNext());

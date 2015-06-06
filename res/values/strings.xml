@@ -30,9 +30,11 @@
     <string name="login_password_empty">password is empty</string>
     <string name="login_email_empty">email is empty</string>
     <string name="no_network_title">network</string>
+    <string name="email_no_exit">this email don\'t exit in our system</string>
     <string name="no_network_message">no network avalaible.Please active your network</string>
 
     <string name="myfriendlist">List of my friends</string>
+    <string name="addFriendToMyList">add a friend to my list</string>
     
     <!-- Main menu -->
     <string-array name="mainMenu">

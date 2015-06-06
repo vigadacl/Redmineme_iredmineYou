@@ -146,7 +146,7 @@ public class Database extends SQLiteOpenHelper {
 	public Cursor getInformations(String email, String password) {
 		final SQLiteDatabase db = getWritableDatabase();
 
-		String[] columns = {USERID, EMAIL,NAME, PASSWORD };
+		String[] columns = {EMAIL,PASSWORD };
 		Cursor cursor = db.query(TABLE_USER, columns, null, null, null, null,
 				null);
 

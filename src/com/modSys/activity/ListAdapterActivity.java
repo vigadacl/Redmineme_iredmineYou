@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.widget.ListView;
 
 
-public abstract class ListAdapterActivity extends Activity{
+public abstract class ListAdapterActivity extends Activity {
 
 	protected String[] titles;
 	protected String[] description;

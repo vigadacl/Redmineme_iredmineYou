@@ -1,12 +1,18 @@
 package com.modSys.activity;
 
+import java.util.ArrayList;
+
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -15,12 +21,15 @@ import com.tes.modulSystem.R;
 
 public class NextActivity extends ListAdapterActivity {
 
+	
+	private EditText txt;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_next);
 		
+		txt = (EditText) findViewById(R.id.addFriendToMyList);
 		images = new int[] { R.drawable.imageprofil,
 				R.drawable.group, R.drawable.ic_services, R.drawable.imagesettings };
 
@@ -62,8 +71,10 @@ public class NextActivity extends ListAdapterActivity {
 				}
 			}
 		});
-
+	
 	}
+
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
