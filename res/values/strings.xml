@@ -17,16 +17,22 @@
     <string name="passwordHint">password</string>
     <string name="emailHint">email</string>
     <string name="login">Sign in</string>
+    <string name="password_short">your password is short. It muss contains at least 6 letters</string>
     <string name="registerPage">create a new acccount</string>
     <string name="register">Sign up</string>
+    <string name="email_matched_password">please verified your email address</string>
+    <string name="password_matched_email">This password does not match the email address</string>
     <string name="passwordforget">have you forget your password?</string>
     <string name="show_pwd">Show password</string>
+    <string name="email_exit">This email already exit. Please change your email</string>
     <string name="login_username_empty">username is empty</string>
     <string name="login_password_empty">password is empty</string>
     <string name="login_email_empty">email is empty</string>
     <string name="no_network_title">network</string>
     <string name="no_network_message">no network avalaible.Please active your network</string>
 
+    <string name="myfriendlist">List of my friends</string>
+    
     <!-- Main menu -->
     <string-array name="mainMenu">
         <item> Profil </item>
@@ -52,6 +58,7 @@
     
     
     <!-- remineme dialog -->
+    <string name="confirmremidne">A new remidne has been added.You can see this in all mein remidne</string>
     <string name="action_remineMe">Remine me</string>
     <string name="action_remineMeGroup">Remine Group</string>
     <string name="newReminemetitle">New remine me</string>
@@ -59,10 +66,17 @@
     <string name="datebegin">Date beginn</string>
     <string name="dateend">date end</string>
     <string name="remember_date">remember me at</string>
-    <string name="from">Enter date begin</string>  
-    <string name="to">Enter date end</string>
-    <string name="remember">Enter date remember</string>
-   
+    <string name="from">Start</string>  
+    <string name="to">End</string>
+    <string name="remember">Delay</string>
+    <string name="createremineme">Create Remine me</string>
+    <string name="createreminegroup">Create Remine group</string>
+    <string name="fromdate_empty">no date given</string>
+    <string name="addUser">Add User</string>
+    <string name="start">Start:</string>
+    <string name="end">End:</string>
+    <string name="delay">Delay:</string> 
+    
     <!--  -->
     <string name="text">date</string>
     
