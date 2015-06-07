@@ -1,7 +1,10 @@
 package com.modSys.activity;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Locale;
 
 import android.app.Activity;
@@ -9,6 +12,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -171,11 +175,49 @@ public class ReminemePage1 extends Activity implements OnClickListener {
 				rememberDateEtxt.requestFocus();
 				rememberDateEtxt.setError(getString(R.string.fromdate_empty));
 			} else {
-				Database db = new Database(this);
-				Remidne remidne = new Remidne(remidnename, start, end, delay);
-				db.createRemidne(remidne);
+				String[] converstart = start.split(" ");
+				String[] newStart = new String[3];
+				for (int i = converstart.length - 1; i >= 0; i--) {
+					int j = 0;
+					newStart[j] = converstart[i];
+					j++;
+				}
+				String str1 = Arrays.toString(converstart);
+				// replace starting "[" and ending "]" and ","
+				str1 = str1.substring(0).replaceAll(" ", "-");
+				String[] converend = end.split(" ");
 				
+				String[] newEnd = new String[3];
+				for (int i = converend.length - 1; i >= 0; i--) {
+					int j = 0;
+					newEnd[j] = converstart[i];
+					j++;
+				}
+				String str2 = Arrays.toString(converend);
+				str2 = str2.substring(0).replaceAll(" ", "-");
+				
+				String[] converdelay = delay.split(" ");
+				String[] newdelay = new String[3];
+				for (int i = converdelay.length - 1; i >= 0; i--) {
+					int j = 0;
+					newdelay[j] = converdelay[i];
+					j++;
+				}
+				String str3 = Arrays.toString(converdelay);
+				// replace starting "[" and ending "]" and ","
+				str3 = str3.substring(0).replaceAll(" ", "-");
+				
+				
+				
+				Database db = new Database(this);
+				Remidne remidne = new Remidne(remidnename, str1, str2, str3);
+				db.createRemidne(remidne);
+                Intent inten = new Intent(ReminemePage1.this,ReminemePage3.class);
+                this.startActivity(inten);
 			}
 		}
 	}
+
+
+
 }
