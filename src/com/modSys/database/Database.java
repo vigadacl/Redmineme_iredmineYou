@@ -1,7 +1,6 @@
 package com.modSys.database;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -60,7 +59,7 @@ public class Database extends SQLiteOpenHelper {
 		final String CREATE_REDMINE_TABLE = "CREATE TABLE IF NOT EXISTS "
 				+ TABLE_REMIDNE + " ( " + REMIDNEID + " INTEGER PRIMARY KEY, "
 				+ REMIDNENAME + " TEXT, " + START + " DATE " + END + " DATE "
-				+ DELAY + " DATE " + USERS + " TEXT " + ")";
+				+ DELAY + " DATE " + ")";
 
 		db.execSQL(CREATE_USER_TABLE);
 		db.execSQL(CREATE_REDMINE_TABLE);
@@ -121,7 +120,7 @@ public class Database extends SQLiteOpenHelper {
 		final SQLiteDatabase db = getWritableDatabase();
 		db.delete(TABLE_USER, null, null);
 	}
-    
+
 	/**
 	 * check if a email was already store in database
 	 * 
@@ -132,13 +131,13 @@ public class Database extends SQLiteOpenHelper {
 		final SQLiteDatabase db = getReadableDatabase();
 
 		String query = "select * from " + TABLE_USER + " where " + EMAIL
-				+ " ='" + email + "'" ;
+				+ " ='" + email + "'";
 		Cursor cursor = db.rawQuery(query, null);
 
 		if (cursor.moveToFirst()) {
 			cursor.close();
 			return true;
-		} 
+		}
 		cursor.close();
 		return false;
 	}
@@ -146,7 +145,7 @@ public class Database extends SQLiteOpenHelper {
 	public Cursor getInformations(String email, String password) {
 		final SQLiteDatabase db = getWritableDatabase();
 
-		String[] columns = {EMAIL,PASSWORD };
+		String[] columns = { EMAIL, PASSWORD };
 		Cursor cursor = db.query(TABLE_USER, columns, null, null, null, null,
 				null);
 
@@ -202,7 +201,8 @@ public class Database extends SQLiteOpenHelper {
 				users.add(user);
 			}
 		}
-		Log.i(TAG, users.size() + " usernames were retrieved from the database.");
+		Log.i(TAG, users.size()
+				+ " usernames were retrieved from the database.");
 		return users;
 	}
 
@@ -237,42 +237,34 @@ public class Database extends SQLiteOpenHelper {
 
 		final ContentValues values = new ContentValues();
 
-		String[] usern = new String[remidne.getUsers().size()];
-		;
+		/*
+		 * String[] usern = new String[remidne.getUsers().size()];
+		 * 
+		 * for (int i = 0; i < usern.length; i++) {
+		 * 
+		 * usern[i] = remidne.getUsers().get(i).getName(); }
+		 * 
+		 * String userlist = join(Arrays.asList(usern), ",");
+		 */
 
-		for (int i = 0; i < usern.length; i++) {
-
-			usern[i] = remidne.getUsers().get(i).getName();
-		}
-
-		String userlist = join(Arrays.asList(usern), ",");
 		values.put(NAME, remidne.getName());
 		values.put(START, remidne.getStart());
 		values.put(END, remidne.getEnd());
 		values.put(DELAY, remidne.getDelay());
-		values.put(USERS, userlist);
-
-		Remidne redmineFromDb = getRemidneFromDb(remidne);
-		if (redmineFromDb == null) {
-
+		
 			db.insert(TABLE_REMIDNE, null, values);
-		} else {
-
-			db.update(TABLE_REMIDNE, values, REMIDNEID + "=?",
-					new String[] { String.valueOf(redmineFromDb.getId()) });
-		}
+		
 
 		final long rowID = db.insert(TABLE_REMIDNE, null, values);
 		Log.i(TAG, "remidne " + rowID + " has been added.");
 	}
 
-	public Remidne getRemidneFromDb(Remidne remidne) {
+	/*public Remidne getRemidneFromDb(int id) {
 		final SQLiteDatabase db = getReadableDatabase();
 
 		String query = "SELECT " + REMIDNEID + ", " + REMIDNENAME + " , "
-				+ START + " , " + END + " , " + DELAY + " , " + USERS
-				+ " FROM " + TABLE_REMIDNE + " WHERE " + REMIDNEID + " = "
-				+ remidne.getId();
+				+ START + " , " + END + " , " + DELAY +  " FROM "
+				+ TABLE_REMIDNE + " WHERE " + REMIDNEID + " = " + id;
 
 		final Cursor cursor = db.rawQuery(query, null);
 
@@ -281,7 +273,6 @@ public class Database extends SQLiteOpenHelper {
 		String start = "";
 		String end = "";
 		String delay = "";
-		String users = "";
 
 		if (cursor != null && cursor.moveToFirst()) {
 			remidneId = cursor.getInt(0);
@@ -289,8 +280,7 @@ public class Database extends SQLiteOpenHelper {
 			start = cursor.getString(2);
 			end = cursor.getString(3);
 			delay = cursor.getString(4);
-			users = cursor.getString(5);
-
+			Remidne remidne = new Remidne(name, start, end, delay);
 			remidne.setId(remidneId);
 			remidne.setName(name);
 			remidne.setStart(start);
@@ -305,8 +295,8 @@ public class Database extends SQLiteOpenHelper {
 
 		return null;
 	}
-
-	public List<Remidne> getAllRemidne() {
+*/
+	public synchronized List<Remidne> getAllRemidne() {
 		final List<Remidne> remidnes = new ArrayList<Remidne>();
 
 		final SQLiteDatabase db = getReadableDatabase();

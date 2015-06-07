@@ -1,5 +1,6 @@
 package com.modSys.activity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -54,16 +55,23 @@ public class RegistrerActivity extends UserActivity {
 			} else if (password.length() < 6) {
 				password.requestFocus();
 				password.setError(getString(R.string.password_short));
+			} else if (!isEmailValid(emailA)) {
+				email.requestFocus();
+				email.setError(getString(R.string.email_novalid));
+			} else if (!com.tes.modulSystem.util.NetworkState.isNetworkAvailable(this)) {
+				new AlertDialog.Builder(this)
+						.setTitle(R.string.no_network_title)
+						.setMessage(R.string.no_network_message).show();
 			} else {
 				Database db = new Database(this);
 				boolean isda = false;
-				
-					if(db.containEmail(emailA)) {
-						isda = true;
-						email.requestFocus();
-						email.setError(getString(R.string.email_exit));
-					}else {
-				    User user = new User (emailA,user1,pass);
+
+				if (db.containEmail(emailA)) {
+					isda = true;
+					email.requestFocus();
+					email.setError(getString(R.string.email_exit));
+				} else {
+					User user = new User(emailA, user1, pass);
 					db.createOrUpdateUser(user);
 					Toast.makeText(this, "registration success",
 							Toast.LENGTH_SHORT).show();

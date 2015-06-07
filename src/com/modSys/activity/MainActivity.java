@@ -1,5 +1,6 @@
 package com.modSys.activity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -14,14 +15,13 @@ import android.widget.Toast;
 
 import com.modSys.database.Database;
 import com.tes.modulSystem.R;
+import com.tes.modulSystem.util.NetworkState;
 
 public class MainActivity extends UserActivity implements OnClickListener {
-
 
 	private String email2;
 
 	private Button register;
-	
 
 	private TextView changedPass;
 
@@ -43,7 +43,6 @@ public class MainActivity extends UserActivity implements OnClickListener {
 		this.changedPass.setOnClickListener(this);
 	}
 
-	
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
@@ -78,6 +77,10 @@ public class MainActivity extends UserActivity implements OnClickListener {
 			} else if (TextUtils.isEmpty(pass)) {
 				password.requestFocus();
 				password.setError(getString(R.string.login_password_empty));
+			} else if (!NetworkState.isNetworkAvailable(this)) {
+				new AlertDialog.Builder(this)
+						.setTitle(R.string.no_network_title)
+						.setMessage(R.string.no_network_message).show();
 			} else {
 				Database db = new Database(this);
 				Cursor cs = db.getInformations(emailA, pass);
@@ -86,13 +89,13 @@ public class MainActivity extends UserActivity implements OnClickListener {
 				email2 = "";
 				do {
 					if (emailA.equals(cs.getString(0))
-							&& !pass.equals(cs.getString(1))){
+							&& !pass.equals(cs.getString(1))) {
 						loginstatus = false;
 						password.requestFocus();
-						password.setError(getString(R.string.password_matched_email));
+						password.setError(getString(R.string.password_dont_matched_email));
 						loginstatus = false;
-					}else if (emailA.equals(cs.getString(0))
-							&& pass.equals(cs.getString(1))){
+					} else if (emailA.equals(cs.getString(0))
+							&& pass.equals(cs.getString(1))) {
 						loginstatus = true;
 						email2 = cs.getString(0);
 					}
@@ -114,7 +117,7 @@ public class MainActivity extends UserActivity implements OnClickListener {
 		}
 
 	}
-	
+
 	public String getEmail2() {
 		return email2;
 	}
