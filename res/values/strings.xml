@@ -19,40 +19,53 @@
     <string name="logout">LOGOUT</string>
     <string name="login">Sign in</string>
     <string name="password_short">your password is short. It muss contains at least 6 letters</string>
-    <string name="registerPage">create a new acccount</string>
+    <string name="registerPage">Create a new acccount</string>
     <string name="register">Sign up</string>
-    <string name="email_matched_password">please verified your email address</string>
-    <string name="password_matched_email">This password does not match the email address</string>
-    <string name="passwordforget">have you forget your password?</string>
-    <string name="show_pwd">Show password</string>
+    <string name="email_dont_matched_password">Please verified your email address</string>
+    <string name="password_dont_matched_email">This password does not match the email address</string>
+    <string name="passwordforget">Have you forget your password?</string>
+    <string name="show_pwd">Show Password</string>
     <string name="email_exit">This email already exit. Please change your email</string>
-    <string name="login_username_empty">username is empty</string>
-    <string name="login_password_empty">password is empty</string>
-    <string name="login_email_empty">email is empty</string>
-    <string name="no_network_title">network</string>
-    <string name="email_no_exit">this email don\'t exit in our system</string>
-    <string name="no_network_message">no network avalaible.Please active your network</string>
+    <string name="login_username_empty">Username is empty</string>
+    <string name="login_password_empty">Password is empty</string>
+    <string name="login_email_empty">Email is empty</string>
+    <string name="no_network_title">Network</string>
+    <string name="email_novalid">This email is no valid</string>
+    <string name="email_no_exit">This email don\'t exit in our system</string>
+    <string name="no_network_message">No network avalaible. Please active your network</string>
 
+    
+    <!-- search friend and add it to my list -->
     <string name="myfriendlist">List of my friends</string>
     <string name="addFriendToMyList">add a friend to my list</string>
+    
     
     <!-- Main menu -->
     <string-array name="mainMenu">
         <item> Profil </item>
+        <item> Search</item>
         <item> FriendList </item>
         <item> Services </item>
         <item> Settings </item>
     </string-array>
+    
+    
+    <!-- main menu description -->
     <string-array name="mainMenudescription">
         <item> See your Profil </item>
+        <item> Search a Friend in our System</item>
         <item> See the List of all your friends </item>
         <item> Subscribed Services </item>
         <item> Change default Settings</item>
     </string-array>
+    
+    <!-- service menu -->
     <string-array name="serviceMenu">
         <item> Remine </item>
         <item> Chatroom </item>
     </string-array>
+    
+    <!-- service menu descprition -->
     <string-array name="serviceMenudescription">
         <item> Remember me </item>
         <item>Chat with your friends </item>
@@ -66,24 +79,17 @@
     <string name="action_remineMeGroup">Remine Group</string>
     <string name="newReminemetitle">New remine me</string>
     <string name="newRemineGrouptitle">New remine for Group</string>
-    <string name="datebegin">Date beginn</string>
-    <string name="dateend">date end</string>
-    <string name="remember_date">remember me at</string>
     <string name="from">Start</string>  
     <string name="to">End</string>
     <string name="remember">Delay</string>
     <string name="createremineme">Create Remine me</string>
     <string name="createreminegroup">Create Remine group</string>
-    <string name="fromdate_empty">no date given</string>
+    <string name="fromdate_empty">No date given</string>
     <string name="addUser">Add User</string>
     <string name="start">Start:</string>
     <string name="end">End:</string>
     <string name="delay">Delay:</string> 
-    
-    <!--  -->
     <string name="text">date</string>
-    
-    <!-- new group dialog -->
     <string name="newgrouptitle">Create a new group</string>
     <string name="newgroupname">Name of group</string>
     <string name="description">Description</string>
@@ -94,7 +100,7 @@
     <string name="from_date">from date</string>
     <string name="to_date">to date</string>
     
-    <!-- menu -->
+    <!--main menu -->
     <string name="searchFriendInModulSystem">Search</string>
     <string name="desc">profil description</string>
     <string name="profildescription"> See your Profil </string>
@@ -165,6 +171,7 @@
     <string name="summary_language_listpreference">select a language</string>
     <string name="dialog_language_listpreference">Choose a language</string>
 
+    <!-- setting to choose one language -->
     <string-array name="language_entriesValues">
         <item>Englisch</item>
         <item>French</item>
